@@ -1,4 +1,4 @@
-//  main.cpp 7 sep 2022
+//  main.cpp 12 sep 2022
 //  tacrao - this is a practice input, output program
 //
 //  Created by Charles Phillips on 8/16/22.
