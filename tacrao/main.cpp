@@ -1,11 +1,11 @@
-//  main.cpp 12 sep 2022
+//  main.cpp 26 sep 2022
 //  tacrao - this is a practice input, output program
 //
 //  Created by Charles Phillips on 8/16/22.
 //  Copyright © 2022 charles. All rights reserved
 // this version works and creates output
 // now reading .csv file and data is read better
-// this reads the first line 9 times grrr finds first two fields
+// finally reads to end of input file!!!
 
 #include <iostream>
 #include <fstream>
@@ -41,7 +41,6 @@ int main(int argc, const char * argv[])
        cerr << "Error opening input file " << ifname << endl;
        return 1;
      }
-    
    /*
      ofstream fout(outFilePath);
       
@@ -50,7 +49,6 @@ int main(int argc, const char * argv[])
         cerr << "Error opening output file " << outFilePath << endl;
         return 1;
       }
-      
         ifstream targetFile(homeDir + "/Desktop/common_files/satellite1.txt");
     */
     
@@ -58,25 +56,25 @@ int main(int argc, const char * argv[])
     
      int i = 0; // set up the way to count in the while loop
      
-     while (i < 9)  //
+     while (!fin.eof())  // grrrr feof!!
      {
      //    string line;  //  create line
          getline(fin, line);
          
    //      string fair_name = line.substr(); // read fair name at pos this reads the entire file!!
          
-         string fair_name = line.substr(0,9); // just the first ten char first char 0 then 9 more
+         string fair_name = line.substr(0,29); // just the first ten char first char 0 then 9 more
          
-    size_t pos = line.find(","); // first "position" find a comma in line
+    size_t pos = line.find("\t"); // first "position" find a comma in line
          // pos = position??
          
-    string fair_date = line.substr (pos +1,9); // get second field nine char
+    string fair_date = line.substr (pos +1,29); // get second field nine char
  
   // pos and pos1 find the same place
          
-     size_t pos1 = line.find(","); // find another comma, second field
+     size_t pos1 = line.find("\t"); // find another comma, second field
                  
-    string fair_time = line.substr (pos1 +1,9); // at pos(1)??
+    string fair_time = line.substr (pos1 +1,29); // at pos(1)??
          
   //  size_t pos2 = line.find(","); // find another comma, second field
                  
@@ -93,7 +91,7 @@ int main(int argc, const char * argv[])
     //     fout << "line: " << line << endl; // just output the entire line to see what we got
     // this works great!
          
-    fout << "Name: " << fair_name << '\n' << "Date: " << fair_date << "\n" << "Time: " << fair_time << "\n" << endl;
+    fout << "first field: " << fair_name << '\n' << "second field: " << fair_date << "\n" << "third field: " << fair_time << "\n" << endl;
          
          // << "Fair Location: " << "\n" << fair_location << endl;
          
