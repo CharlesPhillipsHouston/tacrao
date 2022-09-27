@@ -56,7 +56,7 @@ int main(int argc, const char * argv[])
     
      int i = 0; // set up the way to count in the while loop
      
-     while (!fin.eof())  // grrrr feof!!
+     while (!fin.eof()) 
      {
      //    string line;  //  create line
          getline(fin, line);
