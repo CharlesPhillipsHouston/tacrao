@@ -22,7 +22,7 @@ string fair_city = "not Houston";
 string fair_county = "not Harris";
 string primary_contact_name = "not Charles";
 
-string line, *p;  // need this???
+string line, *p;  // used in getline below in line 62
 
 int main(int argc, const char * argv[])
 {
