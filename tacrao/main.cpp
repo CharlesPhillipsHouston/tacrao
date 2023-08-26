@@ -1,8 +1,8 @@
-//  main.cpp 13 oct 2022
+//  main.cpp 23 aug 2023
 //  tacrao - this is a practice input, output program
 //
 //  Created by Charles Phillips on 8/16/22.
-//  Copyright © 2022 charles. All rights reserved
+//  Copyright 24 aug 2023 charles. All rights reserved
 // heavily modified by mike marston!!!
 
 #include <iostream>
@@ -33,7 +33,7 @@ string ExtractNextCsv(string searchString, size_t &startPos)
 
 }
 
-string fair_name = "a"; // first field is fair name, give it an intial value
+string fair_name = "a"; // first field is fair name, give it an initial value
 string fair_date = "b"; // second field
 string fair_time = "c"; // third field
 
