@@ -1,9 +1,9 @@
-//  main.cpp 23 aug 2023
+//  23 aug 2023
 //  tacrao - this is a practice input, output program
 //
 //  Created by Charles Phillips on 8/16/22.
 //  Copyright 24 aug 2023 charles. All rights reserved
-// heavily modified by mike marston!!!
+//  heavily modified by mike marston!!!
 
 #include <iostream>
 #include <fstream>
